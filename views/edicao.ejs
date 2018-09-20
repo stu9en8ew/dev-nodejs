@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  </head>
+  <body>
+    <div class="card w-75 border-primary mb-3">
+      <div class="card-header">Animes</div>
+      <div class="card-body text-primary">
+        <form class="form" method="post" action="/atualizar">
+          <div>
+            <input type="hidden" id="id" name="id" value="<%=anime[0].id%>">
+          </div>
+            <div class="form-group">
+                  <label  class="col-sm-2 col-form-label form-control-label" for="nome">Nome</label>
+              <div class="col-sm-10">
+                  <input type="text" class="form-control" placeholder="Digite o seu nome" id="nome" name="nome" value="<%=anime[0].nome%>">
+              </div>
+            </div>
+            <div class="form-group">
+                  <label class="col-sm-2 col-form-label form-control-label" for="categoria">Categoria</label>
+              <div class="col-sm-10">
+                  <input type="text" class="form-control" placeholder="Digite a categoria" id="categoria" name="categoria" value="<%=anime[0].categoria%>">
+              </div>
+            </div>
+            <div class="form-group">
+                  <label class="col-sm-2 col-form-label form-control-label" for="descricao">Descricao</label>
+              <div class="col-sm-10">
+                  <input type="text" class="form-control" placeholder="Digite a descricao" id="descricao" name="descricao" value="<%=anime[0].descricao%>">
+              </div>
+            </div>
+            <div class="form-group">
+                  <label class="col-sm-2 col-form-label form-control-label" for="faixaEtaria">Faixa Etaria</label>
+              <div class="col-sm-10">
+                  <input type="text" class="form-control" placeholder="Digite a faixa etaria" id="faixaEtaria" name="faixaEtaria" value="<%=anime[0].faixaEtaria%>">
+              </div>
+            </div>
+            <div class="form-group">
+                  <label class="col-sm-2 col-form-label form-control-label" for="paisOrigem">Pais Origem</label>
+              <div class="col-sm-10">
+                  <input type="text" class="form-control" placeholder="Digite o pais de origem" id="paisOrigem" name="paisOrigem" value="<%=anime[0].paisOrigem%>">
+              </div>
+            </div>
+            <div class="form-group">
+                  <label class="col-sm-2 col-form-label form-control-label" for="siteOficial">Site Oficial</label>
+              <div class="col-sm-10">
+                  <input type="text" class="form-control" placeholder="Digite o site oficial" id="siteOficial" name="siteOficial" value="<%=anime[0].siteOficial%>">
+              </div>
+            </div>
+            <div class="text-center">
+              <input type="submit" class="btn btn-primary" value="Atualizar">
+            </div>
+            <div style="text-align:right">
+              <a href="/lista">Voltar</a>
+            </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title>Lista de Animes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+</head>
+	<body>
+		<table border="1" style="border-collapse:collapse;" cellpadding="5px">
+      <tr>
+        <td colspan="8" align="right"><a href="/">Home</a> | <a href="/form">Novo</a></td>
+      </tr>
+      <tr>
+				<td>Nome</td>
+				<td>Categoria</td>
+				<td>Descricao</td>
+        <td>Faixa Etaria</td>
+        <td>Pais Origem</td>
+        <td>Site Oficial</td>
+        <td colspan="2" align="center">Action</td>
+			</tr>
+			<%for(var i=0;i<listResults.length;i++){%>
+				<tr align="center">
+					<td><%=listResults[i].nome%></td>
+					<td><%=listResults[i].categoria%></td>
+					<td><%=listResults[i].descricao%></td>
+					<td><%=listResults[i].faixaEtaria%></td>
+          <td><%=listResults[i].paisOrigem%></td>
+          <td><%=listResults[i].siteOficial%></td>
+          <td><a href='/edit/<%=listResults[i].id%>'>edit</a></td>
+          <td><a href='/delete/<%=listResults[i].id%>'>delete</a></td>
+				</tr>
+			<%}%>
+		</table>
+	</body>
+</html>
